@@ -1,0 +1,17 @@
+version: "3.7"
+
+services:
+
+  app:
+    image: gmorales256/getting-starter:v3
+    ports:
+      - "4000:4000"
+    environment:
+      MYSQL_HOST: mysql
+      MYSQL_USER: root
+      MYSQL_PASSWORD: secret
+
+  mysql:
+    image: mysql:5.7
+    environment:
+      MYSQL_ROOT_PASSWORD: secret
